@@ -4,30 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Header Mobile Gontor dengan Submenu</title>
+  <title>Navbar Gontor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="mobile-header">
-    <div class="header-content">
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-      <img src="logo-gontor.png" alt="Logo Gontor" class="logo" />
-      <button class="search-btn">&#128269;</button>
+  <header>
+    <div class="navbar">
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <div class="logo">
+        <img src="/IMG.jpg" alt="Logo Gontor" />
+      </div>
+      <span class="search-icon" onclick="toggleSearch()">&#128269;</span>
     </div>
-    <nav class="mobile-nav" id="mobileNav">
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Tentang</a></li>
-        <li class="has-submenu">
-          <a href="#" onclick="toggleSubmenu(event)">Pendaftaran</a>
-          <ul class="submenu">
-            <li><a href="#">Santri Baru</a></li>
-            <li><a href="#">Mahasiswa</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Berita</a></li>
-        <li><a href="#">Kontak</a></li>
-      </ul>
+    <nav id="nav-links" class="mobile-hidden">
+      <a href="#">Beranda</a>
+      <div class="dropdown">
+        <a href="#">Tentang Gontor</a>
+        <div class="dropdown-content">
+          <a href="#">Visi & Misi</a>
+          <a href="#">Kepemimpinan</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Sejarah</a>
+        <div class="dropdown-content">
+          <a href="#">Awal Berdiri</a>
+          <a href="#">Perkembangan</a>
+        </div>
+      </div>
+      <a href="#">Warta</a>
+      <div class="dropdown">
+        <a href="#">Pendaftaran</a>
+        <div class="dropdown-content">
+          <a href="#">Santri Baru</a>
+          <a href="#">Mahasiswa</a>
+        </div>
+      </div>
+      <a href="#">Kontak & Alamat</a>
     </nav>
   </header>
   <script src="script.js"></script>
